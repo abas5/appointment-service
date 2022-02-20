@@ -1,0 +1,35 @@
+Appointment Scheduler Service
+
+
+This is a simple service that schedules appointments 
+and views a list of appointments made.
+
+
+To build the docker image
+Run 'docker build -t  appointment-service .'
+
+To run the container run:
+'docker run -d -p 82:82 appointment-service'
+
+Now had over to ' http://localhost:82/ ' to check out the app
+
+# Endpoint 1: Create an appointment via /set-appointment
+Accepts to two params:
+    - USER ID: Integer e.g 73
+    - DATE: String e.g 12/02/2022 2:00 ! Only handles this date format as of now.
+To send a POST request via command line:
+    Enter this command
+        - ` curl -d "&userid=73 &date=12/02/2022 2:00" -X POST http://0.0.0.0:82/set-appointment `
+
+# Endpoint 2: View all the appointments made by a specific user via /appointments/<USER_ID>
+Accpets one param:
+    - USER ID: Integer e.g 73
+To view appointments by user id use the /appointments/<USER_ID> endpoint: 'http://localhost:82/appointments/<USER_ID>'
+    - This will return a list of appointments by user ID
+
+# IF I HAD MORE TIME...
+- I would create unit tests to make sure my code is tested and
+does not have regression when building new features or fixing bugs.
+- All of my logic is in the app.py file. With more time I would have created a separate
+module with a class and smaller functions. 
+- There is more validations I could have handle as well as more ways to accept the date format.
