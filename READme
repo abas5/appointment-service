@@ -14,7 +14,7 @@ To run the container run:
 Now had over to ' http://localhost:82/ ' to check out the app
 
 # Endpoint 1: Create an appointment via /set-appointment
-Accepts to two params:
+Accepts two params:
     - USER ID: Integer e.g 73
     - DATE: String e.g 12/02/2022 2:00 ! Only handles this date format as of now.
 To send a POST request via command line:
