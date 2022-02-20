@@ -5,7 +5,7 @@ This is a simple service that schedules appointments
 and views a list of appointments made.
 
 
-To build the docker image
+To build the docker image (Make sure you are in the appointment-service home directory)
 Run 'docker build -t  appointment-service .'
 
 To run the container run:
